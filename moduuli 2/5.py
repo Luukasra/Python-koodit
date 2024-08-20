@@ -8,8 +8,9 @@ luodinpaino = 13.3
 naulanpaino = 32 * luodinpaino
 leiviskänpaino = 20 * naulanpaino
 
-paino = float(luodit * luodinpaino + naulanpaino * naulat + leiviskä * leiviskänpaino)
+kokopaino = float(luodit * luodinpaino + naulanpaino * naulat + leiviskä * leiviskänpaino)
+kilotulos = int(kokopaino / 1000)
+grammatulos = int(kokopaino - (kilotulos * 1000))
 
 
-
-print(grams)
+print( "Paino nykyajan mitoissa: " + str(kilotulos) + " kilogrammaa ja " + str(grammatulos) + " grammaa")

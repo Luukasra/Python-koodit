@@ -1,8 +1,8 @@
 import math
 
-input = input("mikä on ympyrän säde " )
+input = input("kuinka monta senttimetriä on säde " )
 
 numero = int(input)
 
 circumference = math.pi * numero ** 2
-print("ympyrän pinta-ala on " + str(circumference))
+print("ympyrän pinta-ala on " + str(circumference) + "cm")
