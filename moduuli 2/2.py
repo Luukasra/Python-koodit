@@ -1,7 +1,8 @@
 import math
 
-userinput = input("mikä on ympyrän säde " )
+input = input("mikä on ympyrän säde " )
 
-numero = float(userinput)
+numero = int(input)
+
 circumference = math.pi * numero ** 2
-print(circumference)
+print("ympyrän pinta-ala on " + str(circumference))
