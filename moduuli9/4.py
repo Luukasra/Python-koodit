@@ -22,14 +22,27 @@ class Auto:
 
     def kulje(self, aika):
         self.kuljettu_km = aika * self.nopeus_rn + self.kuljettu_km
+
 lista = []
 
 for i in range(1, 11):
-    auto = (Auto("ABC-"+str(i),random.randint(100,200)))
-    lista.append(auto)
-    auto.printd()
+    huippunopeus = random.randint(100, 200)
 
-while True:
-    for i in lista:
-        auto.kiihdytä(random.randint(-15,15))
-        auto.kulje(i)
+    lista.append(Auto("ABC-"+str(i),huippunopeus))
+
+tosi = True
+while tosi:
+
+    for auto in lista:
+        nopeusmuutos = random.randint(-10, 15)
+        auto.kiihdytä(nopeusmuutos)
+        auto.kulje(1)
+        if auto.kuljettu_km >= 10000:
+            tosi = False
+            break
+
+
+print(f"{'rekkari':<10} {'max sped':<10} {'Nopeusrn':<10} {'kilsat':<10}")
+
+for auto in lista:
+    print(f"{auto.rekisteri:<10} {auto.huippunopeus:<10} {auto.nopeus_rn:<10} {auto.kuljettu_km:<10f} km")
