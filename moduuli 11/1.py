@@ -21,6 +21,7 @@ class Lehti(Julkaisu):
     def __init__(self,name, publisher):
         self.publisher = publisher
         super().__init__(name)
+
     def printdetails(self):
         super().tulosta()
         print( self.publisher)
